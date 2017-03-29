@@ -1,5 +1,7 @@
 #Simple OCR SERVER
 
+<img align="right" height="300" src="https://raw.githubusercontent.com/psleo/python-ocr-server/master/python-ocr-server.png">
+
 This is a simple OCR server, running a Flask server with a celery worker using ocrmypdf for OCR extracting.
 
 To run this application just build the docker image and run:
