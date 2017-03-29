@@ -1,0 +1,33 @@
+version: '2'
+
+services:
+  redis:
+    image: 'redis:3.0-alpine'
+    command: redis-server --requirepass devpassword
+    volumes:
+      - 'redis:/var/lib/redis/data'
+    ports:
+      - '6379:6379'
+
+  website:
+    build: .
+    command: >
+      gunicorn -b 0.0.0.0:5000
+        --access-logfile -
+        --reload
+        "app:app"
+    environment:
+      PYTHONUNBUFFERED: 'true'
+    volumes:
+      - './uploads:/home/app/ocr/uploads'
+    ports:
+      - '5000:5000'
+
+  celery:
+    build: .
+    command: celery -l info -A app.celery worker
+    volumes:
+      - './uploads:/home/app/ocr/uploads'
+
+volumes:
+  redis:
