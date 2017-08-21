@@ -17,7 +17,6 @@ curl -X POST \
   http://localhost:5000/upload \
   -H 'cache-control: no-cache' \
   -H 'content-type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW' \
-  -H 'postman-token: 1edd0112-0330-436c-435a-ca55e944880c' \
   -F 'file=@Test.pdf'
 
 #Returns this:
@@ -31,8 +30,7 @@ curl -X POST \
 
 curl -X GET \
   http://localhost:5000/status/74f15b3d-a1e8-40ed-886f-b4eb07ba58cb \
-  -H 'cache-control: no-cache' \
-  -H 'postman-token: 4c82d520-1e7d-b801-4f5c-efd168a52d52'
+  -H 'cache-control: no-cache'
 
 #Returns this:
 {
