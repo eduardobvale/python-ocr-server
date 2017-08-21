@@ -1,6 +1,6 @@
 #Simple OCR SERVER
 
-<img align="right" height="300" src="https://raw.githubusercontent.com/psleo/python-ocr-server/master/python-ocr-server.png">
+<img align="right" height="200" src="https://raw.githubusercontent.com/psleo/python-ocr-server/master/python-ocr-server.png">
 
 This is a simple OCR server, running a Flask server with a celery worker using ocrmypdf for OCR extracting.
 
@@ -11,7 +11,6 @@ docker-compose up --build
 ```
 
 <p align="center">
-
   <a href="LICENSE">
     <img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="MIT Licensed" />
   </a>
